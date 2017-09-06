@@ -1,0 +1,65 @@
+{
+  "Requirements": {
+    "Requirement 1": {
+      "name": "DGGS Reference Frame",
+      "subrequirements": {
+        "Functional Algorithms": [
+          "Quantization/Ingestion",
+          "Algebraic",
+          "Interoperability",
+        ],
+      }
+    },
+    "Requirement 2": {
+      "name": "Global Coverage"
+    },
+    "Requirement 3": {
+      "name": "No Overlapping DGGS Cells"
+    },
+    "Requirement 4": {
+      "name": "Multiple Resolutions"
+    },
+    "Requirement 5": {
+      "name": "Area Preservation for all Resolutions"
+    },
+    "Requirement 6": {
+      "name": "DGGS Cells are Simple Polygons"
+    },
+    "Requirement 7": {
+      "name": "DGGS Cell Area Precision Defined"
+    },
+    "Requirement 8": {
+      "name": "Equal Area Cells for each Geometry Type"
+    },
+    "Requirement 9": {
+      "name": "Initial Tessellation has Equal Area Cells"
+    },
+    "Requirement 10": {
+      "name": "Has Cell Refinement Method"
+    },
+    "Requirement 11": {
+      "name": "Can Assign Unique Spatial Reference to Each Cell"
+    },
+    "Requirement 12": {
+      "name": "Unique Index for each Cell"
+    },
+    "Requirement 13": {
+      "name": "Cell Referenced at Centroid"
+    },
+    "Requirement 14": {
+      "name": "Quantization Method(s) for Assigning Data to Each Cell"
+    },
+    "Requirement 15": {
+      "name": "Methods to Perform Heirarchy and Neighbourhood Naviagation"
+    },
+    "Requirement 16": {
+      "name": "Method(s) to Perform Simple Spatial Analysis Operations"
+    },
+    "Requirement 17": {
+      "name": "Method(s) to Read, Interpret and Execute Data Queries"
+    },
+    "Requirement 18": {
+      "name": "Method(s) to Translate Query Results to Standard Data Formats"
+    },
+  }
+}
