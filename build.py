@@ -42,7 +42,7 @@ _dggs_table = []
 for _dggs_data_stream in _dggs_data_streams:
     with _dggs_data_stream:
         _dggs_table.append(yaml.load(_dggs_data_stream, yaml.Loader))
-_jquery = SCRIPT.format(JS_URL))
+_jquery = SCRIPT.format(JS_URL)
 _script = SCRIPT.format(os.path.join(DOCS_DIR, SCRIPT_FILE))
 _lead_tags = [DOCTYPE, HTML, HEAD, CSS, _jquery, _script, HEAD_CLOSE, BODY]
 _table = tabulate(_dggs_table, _headers, tablefmt=FORMAT)
