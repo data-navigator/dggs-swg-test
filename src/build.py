@@ -1,7 +1,6 @@
 # coding=utf-8
 """Generate a HTML Page containing a DGGS Implementation Matrix to display via github-pages."""
 import os
-import pprint
 
 import markdown
 from tabulate import tabulate
