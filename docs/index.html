@@ -10,7 +10,11 @@
     <!-- DataTables -->
     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
   
-    <script type="text/javascript" charset="utf8" src="../src/dggs-matrix.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {                                                                                                                                                                 
+        $('#dggs-matrix').DataTable();
+    } );   
+    </script>
   </head>
   <body>
 <table id="dggs-matrix" class="display">
