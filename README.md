@@ -1,4 +1,4 @@
-# dggs-swg-test
+# DGGS Compatibility Matrix (Draft)
 
 [View Draft Site](https://data-navigator.github.io/dggs-swg-test/)
 
@@ -6,7 +6,7 @@
 
 ### Building the Site
 
-The easiest way to install Python to build the static site is to use the
+The easiest way to install Python with the required packages to build the static site is to use the
 Miniconda3 package manager.
 It can be downloaded [here](https://conda.io/miniconda.html).
 
@@ -14,6 +14,8 @@ Ensure conda is on the system's PATH and restart the shell.
 
 You can then use the shell command `conda env create -f environement.yaml` to
 create the environment.
+
+Activate the environment with the shell command `activate dggs-matrix` on Windows or `source activate dggs-matrix` on Linux/OSX.
 
 #### Requirements
 
