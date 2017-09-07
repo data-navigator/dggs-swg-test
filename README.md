@@ -6,7 +6,7 @@
 
 ### Building the Site
 
-The easiest way to install Python to build the static site is to use the
+The easiest way to install Python with the required packages to build the static site is to use the
 Miniconda3 package manager.
 It can be downloaded [here](https://conda.io/miniconda.html).
 
