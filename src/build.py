@@ -35,8 +35,8 @@ def generate_table_rows():
     """Generate rows for the DGGS Compliance Matrix table from the .yaml files
     found in the ../data directory."""
     data = os.path.join(os.path.pardir, DIR_DATA)
-    filenames = [path for path in os.listdir(data) if path.endswith(YAML)]
-    file_paths = [os.path.join(data, filename) for filename in filenames]
+    file_names = [path for path in os.listdir(data) if path.endswith(YAML)]
+    file_paths = [os.path.join(data, file_name) for file_name in file_names]
     data_streams = [open(data) for data in file_paths]
     rows = []
     for data_stream in data_streams:
@@ -56,17 +56,21 @@ def create_table_html():
 def create_index_html():
     """Create the html for the index file in the ../docs directory which will be
     served on github-pages."""
-    _docs_path = os.path.join(_pwd, DOCS_DIR)
-    _output_file = os.path.join(_docs_path, INDEX_FILE)
-    _output_stream = open(_output_file, WRITE)
-    with _output_stream:
-        _output_stream.writelines(_raw_html)
+    head = open(FILE_HEAD)
+    body = create_table_html()
+    foot = open(FILE_FOOT)
+    with head, foot:
+        return ''.join([head.readlines(), body, foot.readlines()])
 
 
 def main():
     """Verifies all necessary files are present to build successfully. If not,
     notify the user with an informative help message. If so write the index.html
     files in ../docs."""
+    html = create_index_html()
+    path = os.path.join(os.path.pardir, DIR_DOCS, FILE_INDEX)
+    with open(path, WRITE) as output_stream:
+        output_stream.writelines(html)
 
 if __name__ is '__main__':
     main()
