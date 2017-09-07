@@ -17,6 +17,8 @@ FILE_INDEX = 'index.html'
 FILE_SCRIPT = 'script.js'
 MD_EXTENSIONS = ['markdown.extensions.tables']
 TABLE_FORMAT = 'pipe'
+TABLE_TAG = '<table>'
+TABLE_ID_TAG = '<table id="dggs-matrix" class="display">'
 WRITE = 'w+'
 YAML = '.yaml'
 
@@ -25,7 +27,7 @@ def generate_table_column_headers():
     """Generate column headers for the DGGS Compliance Matrix table from the
     .yaml files found in the ../res directory."""
     res = os.path.join(os.path.pardir, DIR_RES)
-    header_stream = open(os.path.join(res, FILE_HEADERS))
+    header_stream = open(os.path.join(res, 'en', FILE_HEADERS))
     with header_stream:
         headers = yaml.load(header_stream, yaml.Loader)
     yield from headers
@@ -57,10 +59,10 @@ def create_index_html():
     """Create the html for the index file in the ../docs directory which will be
     served on github-pages."""
     head = open(FILE_HEAD)
-    body = create_table_html()
+    body = create_table_html().replace(TABLE_TAG, TABLE_ID_TAG)
     foot = open(FILE_FOOT)
     with head, foot:
-        return ''.join([head.readlines(), body, foot.readlines()])
+        return ''.join([head.read(), body, foot.read()])
 
 
 def main():
@@ -72,5 +74,6 @@ def main():
     with open(path, WRITE) as output_stream:
         output_stream.writelines(html)
 
-if __name__ is '__main__':
+if __name__ == '__main__':
+    print('Creating index.html')
     main()
