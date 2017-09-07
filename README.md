@@ -1,4 +1,4 @@
-# dggs-swg-test
+# DGGS Compatibility Matrix Draft
 
 [View Draft Site](https://data-navigator.github.io/dggs-swg-test/)
 
