@@ -15,6 +15,8 @@ Ensure conda is on the system's PATH and restart the shell.
 You can then use the shell command `conda env create -f environement.yaml` to
 create the environment.
 
+Activate the environment with the shell command `activate dggs-matrix` on Windows or `source activate dggs-matrix` on Linux/OSX.
+
 #### Requirements
 
 - Python 3
