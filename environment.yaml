@@ -1,0 +1,24 @@
+name: dggs-matrix
+channels:
+- conda-forge
+- anaconda-fusion
+- defaults
+dependencies:
+- ca-certificates=2017.7.27.1=0
+- certifi=2017.7.27.1=py36_0
+- ncurses=5.9=10
+- openssl=1.0.2l=0
+- pip=9.0.1=py36_0
+- python=3.6.2=0
+- pyyaml=3.12=py36_1
+- readline=6.2=0
+- setuptools=36.3.0=py36_0
+- sqlite=3.13.0=1
+- tabulate=0.7.7=py36_0
+- tk=8.5.19=2
+- wheel=0.29.0=py36_0
+- xz=5.2.3=0
+- yaml=0.1.6=0
+- zlib=1.2.11=0
+- markdown=2.6.9=py36_0
+prefix: //anaconda/envs/dggs-matrix
