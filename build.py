@@ -15,7 +15,7 @@ DOCS_DIR = 'docs'
 DOCTYPE = '<!DOCTYPE html>'
 FORMAT = 'pipe'
 JAVASCRIPT = '<script type="text/javascript" src="{}"></script>'
-JS_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'
+JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'
 SCRIPT = '<script src="{}"></script>'
 HEADERS_FILE = 'headers.yaml'
 HEAD = '<head>'
@@ -43,7 +43,7 @@ _dggs_table = []
 for _dggs_data_stream in _dggs_data_streams:
     with _dggs_data_stream:
         _dggs_table.append(yaml.load(_dggs_data_stream, yaml.Loader))
-_jquery = SCRIPT.format(JS_URL)
+_jquery = SCRIPT.format(JQUERY_URL)
 _script = JAVASCRIPT.format(SCRIPT_FILE)
 _lead_tags = [DOCTYPE, HTML, HEAD, CSS, _jquery, _script, HEAD_CLOSE, BODY]
 _table = tabulate(_dggs_table, _headers, tablefmt=FORMAT)
