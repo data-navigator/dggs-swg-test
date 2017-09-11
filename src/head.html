@@ -41,7 +41,10 @@ input{font-size:0.929em;}
 <!-- Local -->
 <script type="text/javascript">
 $(document).ready(function() {                                                                                                                                                                 
-    $('#dggs-matrix').DataTable();
+    $('#dggs-matrix').dataTable( {
+        "bPaginate": false,
+        "bInfo": false
+    } );
 } );   
 </script>
 <title>OGC Discrete Global Grid System Registry</title>

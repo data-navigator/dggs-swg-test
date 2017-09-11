@@ -23,19 +23,28 @@ WRITE = 'w+'
 YAML = '.yaml'
 
 
-def generate_table_column_headers():
-    """Generate column headers for the DGGS Compliance Matrix table from the
+def generate_table_rows():
+    """Generate row values for the DGGS Compliance Matrix table from the
     .yaml files found in the ../res directory."""
     res = os.path.join(os.path.pardir, DIR_RES)
-    header_stream = open(os.path.join(res, 'en', FILE_HEADERS))
-    with header_stream:
-        headers = yaml.load(header_stream, yaml.Loader)
-    yield from headers
+    requirements_stream = open(os.path.join(res, 'en', FILE_HEADERS))
+    data = os.path.join(os.path.pardir, DIR_DATA)
+    file_names = [path for path in os.listdir(data) if path.endswith(YAML)]
+    file_paths = [os.path.join(data, file_name) for file_name in file_names]
+    data_streams = [open(data) for data in file_paths]
+    rows = []
+    with requirements_stream:
+        requirements = yaml.load(requirements_stream, yaml.Loader)
+    for data_stream in data_streams:
+        with data_stream:
+            rows.append(yaml.load(data_stream, yaml.Loader)[1:])
+    yield from zip(requirements, *rows)
 
 
-def generate_table_rows():
-    """Generate rows for the DGGS Compliance Matrix table from the .yaml files
-    found in the ../data directory."""
+def generate_table_column_headers():
+    """Generate column headers for the DGGS Compliance Matrix table from the
+    names of implementations defined in the .yaml files found in the ../data
+    directory."""
     data = os.path.join(os.path.pardir, DIR_DATA)
     file_names = [path for path in os.listdir(data) if path.endswith(YAML)]
     file_paths = [os.path.join(data, file_name) for file_name in file_names]
@@ -43,7 +52,7 @@ def generate_table_rows():
     rows = []
     for data_stream in data_streams:
         with data_stream:
-            rows.append(yaml.load(data_stream, yaml.Loader))
+            rows.append(yaml.load(data_stream, yaml.Loader)[0])
     yield from rows
 
 
