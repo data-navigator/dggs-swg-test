@@ -23,8 +23,8 @@ WRITE = 'w+'
 YAML = '.yaml'
 
 
-def generate_table_column_headers():
-    """Generate column headers for the DGGS Compliance Matrix table from the
+def generate_table_rows():
+    """Generate row values for the DGGS Compliance Matrix table from the
     .yaml files found in the ../res directory."""
     res = os.path.join(os.path.pardir, DIR_RES)
     header_stream = open(os.path.join(res, 'en', FILE_HEADERS))
@@ -33,9 +33,10 @@ def generate_table_column_headers():
     yield from headers
 
 
-def generate_table_rows():
-    """Generate rows for the DGGS Compliance Matrix table from the .yaml files
-    found in the ../data directory."""
+def generate_table_column_headers():
+    """Generate column headers for the DGGS Compliance Matrix table from the
+    names of implementations defined in the .yaml files found in the ../data
+    directory."""
     data = os.path.join(os.path.pardir, DIR_DATA)
     file_names = [path for path in os.listdir(data) if path.endswith(YAML)]
     file_paths = [os.path.join(data, file_name) for file_name in file_names]
@@ -43,14 +44,15 @@ def generate_table_rows():
     rows = []
     for data_stream in data_streams:
         with data_stream:
-            rows.append(yaml.load(data_stream, yaml.Loader))
+            rows.append(yaml.load(data_stream, yaml.Loader)[0])
+    print(str(rows))
     yield from rows
 
 
 def create_table_html():
     """Create the html table to embed in the body of index.html"""
-    cols = generate_table_rows()
-    rows = generate_table_column_headers()
+    rows = generate_table_rows()
+    cols = generate_table_column_headers()
     table = tabulate(rows, cols, tablefmt=TABLE_FORMAT)
     return markdown.markdown(table, extensions=MD_EXTENSIONS)
 
