@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- OGC favicon -->
+  <link rel="shortcut icon" href="https://www.opengeospatial.org/pub/www/files/favicon.ico" type="image/vnd.microsoft.icon" />
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+  <style>
+      h1 {
+      margin: 20 10 0 10px;
+    }
+
+    html,
+    body,
+    div,
+    a,
+    img,
+    label,
+    table,
+    tbody,
+    thead,
+    tr,
+    th,
+    td {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+    }
+
+    :focus {
+      outline: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    select {
+      max-width: 100%;
+    }
+
+    body {
+      background: #f6f6f6;
+      color: #333;
+      font: 14px/1.6 'Open
+ Sans',"Helvetica",Arial;-webkit-font-smoothing:antialiased;}
+ body a {
+        color:#2e81c2;
+        text-decoration: none;
+      }
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+      table {
+        margin: 0 0 1.5em;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-right: none;
+        background: #fff;
+      }
+      th {
+        font-weight: bold;
+        padding: 10px 10px;
+        background: #555;
+        color: #000;
+        vertical-align: middle;
+        border-top: 1px solid black;
+      }
+      tr {
+        padding: 5px 5px;
+      }
+      td {
+        padding: 5px 10px;
+        border-top: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+      }
+      input {
+        margin: 2px 0;
+        padding: 4px;
+      }
+      input {
+        font-size: 0.929em;
+      }
+  </style>
+
+  <!-- jQuery -->
+  <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+
+  <!-- DataTables -->
+  <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+  <!-- Local -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#dggs-matrix').DataTable();
+    });
+  </script>
+  <title>OGC Discrete Global Grid System Registry</title>
+</head>
+
+<body>
+  <img src="https://www.opengeospatial.org/pub/www/files/OGC_Logo_2D_Blue_x_0_0.png" alt="OGC Logo" style="float:left" width=25%>
+  <div style="padding-top:17px;font-weight:600;font-size:200%;color:#444;font-family:'Helvetica Neue',Helvetica,Arial;">
+    Discrete Global Grid System
+  </div>
+  <div style="font-weight:600;font-size:140%;color:#444;font-family:'Helvetica Neue',Helvetica,Arial;">
+    Abstract Specification
+  </div>
+  <div style="font-weight:600;font-size:140%;color:#444;font-family:'Helvetica Neue',Helvetica,Arial;">
+    Compatibility Matrix
+  </div>
+  <table id="dggs-matrix" class="display">
+    <thead>
+      <tr>
+        <th align="left">Implementation</th>
+        <th align="left">DGGS Reference Frame</th>
+        <th align="left">Global Coverage</th>
+        <th align="left">No Overlapping DGGS Cells</th>
+        <th align="left">Multiple Resolutions</th>
+        <th align="left">Area Preservation for all Resolutions</th>
+        <th align="left">DGGS Cells are Simple Polygons</th>
+        <th align="left">DGGS Cell Area Precision Defined</th>
+        <th align="left">Equal Area Cells for each Geometry Type</th>
+        <th align="left">Initial Tessellation has Equal Area Cells</th>
+        <th align="left">Has Cell Refinement Method</th>
+        <th align="left">Can Assign Unique Spatial Reference to Each Cell</th>
+        <th align="left">Unique Index for each Cell</th>
+        <th align="left">Cell Referenced at Centroid</th>
+        <th align="left">Quantization Method(s) for Assigning Data to Each Cell</th>
+        <th align="left">Methods to Perform Heirarchy and Neighbourhood Naviagation</th>
+        <th align="left">Method(s) to Perform Simple Spatial Analysis Operations</th>
+        <th align="left">Method(s) to Read, Interpret and Execute Data Queries</th>
+        <th align="left">Method(s) to Translate Query Results to Standard Data Formats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="left">BlueFish</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+      </tr>
+      <tr>
+        <td align="left">CatInHat</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+      </tr>
+      <tr>
+        <td align="left">OneFish</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+      </tr>
+      <tr>
+        <td align="left">PYXIS Globe</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+      </tr>
+      <tr>
+        <td align="left">RedFish</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+      </tr>
+      <tr>
+        <td align="left">rHealPix</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+      </tr>
+      <tr>
+        <td align="left">Thing1</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+      </tr>
+      <tr>
+        <td align="left">Thing2</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+      </tr>
+      <tr>
+        <td align="left">TwoFish</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+        <td align="left">True</td>
+        <td align="left">False</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+
+</html>
