@@ -49,8 +49,8 @@ def generate_table_rows():
 
 def create_table_html():
     """Create the html table to embed in the body of index.html"""
-    rows = generate_table_rows()
-    cols = generate_table_column_headers()
+    cols = generate_table_rows()
+    rows = generate_table_column_headers()
     table = tabulate(rows, cols, tablefmt=TABLE_FORMAT)
     return markdown.markdown(table, extensions=MD_EXTENSIONS)
 
