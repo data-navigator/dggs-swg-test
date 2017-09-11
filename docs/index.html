@@ -41,7 +41,10 @@ input{font-size:0.929em;}
 <!-- Local -->
 <script type="text/javascript">
 $(document).ready(function() {                                                                                                                                                                 
-    $('#dggs-matrix').DataTable();
+    $('#dggs-matrix').dataTable( {
+        "bPaginate": false,
+        "bInfo": false
+    } );
 } );   
 </script>
 <title>OGC Discrete Global Grid System Registry</title>
@@ -66,10 +69,6 @@ Compatibility Matrix
 <thead>
 <tr>
 <th align="left"></th>
-<th align="left"></th>
-<th align="left"></th>
-<th align="left"></th>
-<th align="left"></th>
 <th align="left">BlueFish</th>
 <th align="left">CatInHat</th>
 <th align="left">OneFish</th>
@@ -83,308 +82,220 @@ Compatibility Matrix
 </thead>
 <tbody>
 <tr>
-<td align="left">I</td>
-<td align="left">m</td>
-<td align="left">p</td>
-<td align="left">l</td>
-<td align="left">e</td>
-<td align="left">m</td>
-<td align="left">e</td>
-<td align="left">n</td>
-<td align="left">t</td>
-<td align="left">a</td>
-<td align="left">t</td>
-<td align="left">i</td>
-<td align="left">o</td>
-<td align="left">n</td>
+<td align="left">Implementation</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">D</td>
-<td align="left">G</td>
-<td align="left">G</td>
-<td align="left">S</td>
-<td align="left"></td>
-<td align="left">R</td>
-<td align="left">e</td>
-<td align="left">f</td>
-<td align="left">e</td>
-<td align="left">r</td>
-<td align="left">e</td>
-<td align="left">n</td>
-<td align="left">c</td>
-<td align="left">e</td>
+<td align="left">DGGS Reference Frame</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">G</td>
-<td align="left">l</td>
-<td align="left">o</td>
-<td align="left">b</td>
-<td align="left">a</td>
-<td align="left">l</td>
-<td align="left"></td>
-<td align="left">C</td>
-<td align="left">o</td>
-<td align="left">v</td>
-<td align="left">e</td>
-<td align="left">r</td>
-<td align="left">a</td>
-<td align="left">g</td>
+<td align="left">Global Coverage</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">N</td>
-<td align="left">o</td>
-<td align="left"></td>
-<td align="left">O</td>
-<td align="left">v</td>
-<td align="left">e</td>
-<td align="left">r</td>
-<td align="left">l</td>
-<td align="left">a</td>
-<td align="left">p</td>
-<td align="left">p</td>
-<td align="left">i</td>
-<td align="left">n</td>
-<td align="left">g</td>
+<td align="left">No Overlapping DGGS Cells</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">M</td>
-<td align="left">u</td>
-<td align="left">l</td>
-<td align="left">t</td>
-<td align="left">i</td>
-<td align="left">p</td>
-<td align="left">l</td>
-<td align="left">e</td>
-<td align="left"></td>
-<td align="left">R</td>
-<td align="left">e</td>
-<td align="left">s</td>
-<td align="left">o</td>
-<td align="left">l</td>
+<td align="left">Multiple Resolutions</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">A</td>
-<td align="left">r</td>
-<td align="left">e</td>
-<td align="left">a</td>
-<td align="left"></td>
-<td align="left">P</td>
-<td align="left">r</td>
-<td align="left">e</td>
-<td align="left">s</td>
-<td align="left">e</td>
-<td align="left">r</td>
-<td align="left">v</td>
-<td align="left">a</td>
-<td align="left">t</td>
+<td align="left">Area Preservation for all Resolutions</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">D</td>
-<td align="left">G</td>
-<td align="left">G</td>
-<td align="left">S</td>
-<td align="left"></td>
-<td align="left">C</td>
-<td align="left">e</td>
-<td align="left">l</td>
-<td align="left">l</td>
-<td align="left">s</td>
-<td align="left"></td>
-<td align="left">a</td>
-<td align="left">r</td>
-<td align="left">e</td>
+<td align="left">DGGS Cells are Simple Polygons</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">D</td>
-<td align="left">G</td>
-<td align="left">G</td>
-<td align="left">S</td>
-<td align="left"></td>
-<td align="left">C</td>
-<td align="left">e</td>
-<td align="left">l</td>
-<td align="left">l</td>
-<td align="left"></td>
-<td align="left">A</td>
-<td align="left">r</td>
-<td align="left">e</td>
-<td align="left">a</td>
+<td align="left">DGGS Cell Area Precision Defined</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">E</td>
-<td align="left">q</td>
-<td align="left">u</td>
-<td align="left">a</td>
-<td align="left">l</td>
-<td align="left"></td>
-<td align="left">A</td>
-<td align="left">r</td>
-<td align="left">e</td>
-<td align="left">a</td>
-<td align="left"></td>
-<td align="left">C</td>
-<td align="left">e</td>
-<td align="left">l</td>
+<td align="left">Equal Area Cells for each Geometry Type</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">I</td>
-<td align="left">n</td>
-<td align="left">i</td>
-<td align="left">t</td>
-<td align="left">i</td>
-<td align="left">a</td>
-<td align="left">l</td>
-<td align="left"></td>
-<td align="left">T</td>
-<td align="left">e</td>
-<td align="left">s</td>
-<td align="left">s</td>
-<td align="left">e</td>
-<td align="left">l</td>
+<td align="left">Initial Tessellation has Equal Area Cells</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">H</td>
-<td align="left">a</td>
-<td align="left">s</td>
-<td align="left"></td>
-<td align="left">C</td>
-<td align="left">e</td>
-<td align="left">l</td>
-<td align="left">l</td>
-<td align="left"></td>
-<td align="left">R</td>
-<td align="left">e</td>
-<td align="left">f</td>
-<td align="left">i</td>
-<td align="left">n</td>
+<td align="left">Has Cell Refinement Method</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">C</td>
-<td align="left">a</td>
-<td align="left">n</td>
-<td align="left"></td>
-<td align="left">A</td>
-<td align="left">s</td>
-<td align="left">s</td>
-<td align="left">i</td>
-<td align="left">g</td>
-<td align="left">n</td>
-<td align="left"></td>
-<td align="left">U</td>
-<td align="left">n</td>
-<td align="left">i</td>
+<td align="left">Can Assign Unique Spatial Reference to Each Cell</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">U</td>
-<td align="left">n</td>
-<td align="left">i</td>
-<td align="left">q</td>
-<td align="left">u</td>
-<td align="left">e</td>
-<td align="left"></td>
-<td align="left">I</td>
-<td align="left">n</td>
-<td align="left">d</td>
-<td align="left">e</td>
-<td align="left">x</td>
-<td align="left"></td>
-<td align="left">f</td>
+<td align="left">Unique Index for each Cell</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">C</td>
-<td align="left">e</td>
-<td align="left">l</td>
-<td align="left">l</td>
-<td align="left"></td>
-<td align="left">R</td>
-<td align="left">e</td>
-<td align="left">f</td>
-<td align="left">e</td>
-<td align="left">r</td>
-<td align="left">e</td>
-<td align="left">n</td>
-<td align="left">c</td>
-<td align="left">e</td>
+<td align="left">Cell Referenced at Centroid</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">Q</td>
-<td align="left">u</td>
-<td align="left">a</td>
-<td align="left">n</td>
-<td align="left">t</td>
-<td align="left">i</td>
-<td align="left">z</td>
-<td align="left">a</td>
-<td align="left">t</td>
-<td align="left">i</td>
-<td align="left">o</td>
-<td align="left">n</td>
-<td align="left"></td>
-<td align="left">M</td>
+<td align="left">Quantization Method(s) for Assigning Data to Each Cell</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">M</td>
-<td align="left">e</td>
-<td align="left">t</td>
-<td align="left">h</td>
-<td align="left">o</td>
-<td align="left">d</td>
-<td align="left">s</td>
-<td align="left"></td>
-<td align="left">t</td>
-<td align="left">o</td>
-<td align="left"></td>
-<td align="left">P</td>
-<td align="left">e</td>
-<td align="left">r</td>
+<td align="left">Methods to Perform Heirarchy and Neighbourhood Naviagation</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
 </tr>
 <tr>
-<td align="left">M</td>
-<td align="left">e</td>
-<td align="left">t</td>
-<td align="left">h</td>
-<td align="left">o</td>
-<td align="left">d</td>
-<td align="left">(</td>
-<td align="left">s</td>
-<td align="left">)</td>
-<td align="left"></td>
-<td align="left">t</td>
-<td align="left">o</td>
-<td align="left"></td>
-<td align="left">P</td>
+<td align="left">Method(s) to Perform Simple Spatial Analysis Operations</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">True</td>
 </tr>
 <tr>
-<td align="left">M</td>
-<td align="left">e</td>
-<td align="left">t</td>
-<td align="left">h</td>
-<td align="left">o</td>
-<td align="left">d</td>
-<td align="left">(</td>
-<td align="left">s</td>
-<td align="left">)</td>
-<td align="left"></td>
-<td align="left">t</td>
-<td align="left">o</td>
-<td align="left"></td>
-<td align="left">R</td>
-</tr>
-<tr>
-<td align="left">M</td>
-<td align="left">e</td>
-<td align="left">t</td>
-<td align="left">h</td>
-<td align="left">o</td>
-<td align="left">d</td>
-<td align="left">(</td>
-<td align="left">s</td>
-<td align="left">)</td>
-<td align="left"></td>
-<td align="left">t</td>
-<td align="left">o</td>
-<td align="left"></td>
-<td align="left">T</td>
+<td align="left">Method(s) to Read, Interpret and Execute Data Queries</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">False</td>
 </tr>
 </tbody>
 </table>
