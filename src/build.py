@@ -28,16 +28,17 @@ def generate_table_rows():
     .yaml files found in the ../res directory."""
     res = os.path.join(os.path.pardir, DIR_RES)
     requirements_stream = open(os.path.join(res, 'en', FILE_HEADERS))
+    with requirements_stream:
+        requirements = yaml.load(requirements_stream, yaml.Loader)
     data = os.path.join(os.path.pardir, DIR_DATA)
     file_names = [path for path in os.listdir(data) if path.endswith(YAML)]
     file_paths = [os.path.join(data, file_name) for file_name in file_names]
     data_streams = [open(data) for data in file_paths]
     rows = []
-    with requirements_stream:
-        requirements = yaml.load(requirements_stream, yaml.Loader)
     for data_stream in data_streams:
         with data_stream:
-            rows.append(yaml.load(data_stream, yaml.Loader)[1:])
+            yaml_data = yaml.load(data_stream, yaml.Loader)
+            rows.append(yaml_data['requirements'].split(' '))
     yield from zip(requirements, *rows)
 
 
@@ -52,7 +53,10 @@ def generate_table_column_headers():
     rows = []
     for data_stream in data_streams:
         with data_stream:
-            rows.append(yaml.load(data_stream, yaml.Loader)[0])
+            yaml_data = yaml.load(data_stream, yaml.Loader)
+            tag_open = '<a href="{url}">'.format(url=yaml_data['url'])
+            tag_close = '</a>'
+            rows.append(tag_open + yaml_data['name'] + tag_close)
     yield from rows
 
 

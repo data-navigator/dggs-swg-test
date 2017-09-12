@@ -1,19 +1,21 @@
-- PYXIS Globe
-- true
-- true
-- false
-- true
-- true
-- false
-- true
-- true
-- false
-- false
-- true
-- true
-- true
-- true
-- true
-- true
-- true
-- true
+name: PYXIS Globe
+url: https://pyxisglobe.com
+requirements:
+  true
+  true
+  false
+  true
+  true
+  false
+  true
+  true
+  false
+  false
+  true
+  true
+  true
+  true
+  true
+  true
+  true
+  true
