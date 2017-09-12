@@ -13,7 +13,7 @@ type="image/vnd.microsoft.icon" />
 
 <style>
 h1 {margin: 20 10 0 10px;}
-html,body,div,a,img,label,table,tbody,thead,tr,th,td{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
+html,body,div,a,img,label{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
 :focus{outline:0;}
 table{border-collapse:collapse;border-spacing:0;}
 img{max-width:100%;height:auto;}
@@ -25,7 +25,7 @@ img{height:auto;max-width:100%;}
 table{margin:0 0 1.5em;width:100%;border:1px solid
 #ddd;border-right:none;background:#fff;}
 th{font-weight:bold;padding:10px
-10px;background:#555;color:#000;vertical-align:middle;border-top: 1px solid black;}
+10px;background:#555;color:#000;vertical-align:middle;border-top: 1px solid #ddd;}
 tr{padding:5px 5px;}
 td{padding:5px 10px;border-top:1px solid #ddd;border-right:1px solid #ddd;}
 input{margin:2px 0;padding:4px;}
@@ -43,10 +43,7 @@ input{font-size:0.929em;}
 $(document).ready(function() {                                                                                                                                                                 
     $('#dggs-matrix').dataTable( {
         "bPaginate": false,
-        "bInfo": false,
-        "aoColumnDefs": [
-            { "bSortable": false }
-        ]
+        "bInfo": false
     } );
 } );   
 </script>
