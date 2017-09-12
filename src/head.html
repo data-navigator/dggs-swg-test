@@ -43,7 +43,10 @@ input{font-size:0.929em;}
 $(document).ready(function() {                                                                                                                                                                 
     $('#dggs-matrix').dataTable( {
         "bPaginate": false,
-        "bInfo": false
+        "bInfo": false,
+        "aoColumnDefs": [
+            { "bSortable": false }
+        ]
     } );
 } );   
 </script>
