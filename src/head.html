@@ -40,10 +40,13 @@ input{font-size:0.929em;}
 
 <!-- Local -->
 <script type="text/javascript">
-$(document).ready(function() {                                                                                                                                                                 
+$(document).ready(function() {                                                                                                                                                      
     $('#dggs-matrix').dataTable( {
         "bPaginate": false,
-        "bInfo": false
+        "bInfo": false,
+        "columnDefs": [
+          { "orderable": false, "targets": 0 }
+        ]
     } );
 } );   
 </script>
