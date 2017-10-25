@@ -25,11 +25,11 @@ WRITE = 'w+'
 YAML = '.yaml'
 
 
-def generate_table_rows():
+def generate_table_rows(language):
     """Generate row values for the DGGS Compliance Matrix table from the
     .yaml files found in the ../res directory."""
     res = os.path.join(os.path.pardir, DIR_RES)
-    requirements_stream = open(os.path.join(res, 'en', FILE_HEADERS))
+    requirements_stream = open(os.path.join(res, language, FILE_HEADERS))
     with requirements_stream:
         # list of dictionaries
         requirements = yaml.load(requirements_stream, yaml.Loader)
@@ -79,19 +79,19 @@ def generate_table_column_headers():
     yield from rows
 
 
-def create_table_html():
+def create_table_html(language):
     """Create the html table to embed in the body of index.html"""
-    rows = generate_table_rows()
+    rows = generate_table_rows(language)
     cols = generate_table_column_headers()
     table = tabulate(rows, cols, tablefmt=TABLE_FORMAT)
     return markdown.markdown(table, extensions=MD_EXTENSIONS)
 
 
-def create_index_html():
+def create_index_html(language):
     """Create the html for the index file in the ../docs directory which will be
     served on github-pages."""
     head = open(FILE_HEAD)
-    body = create_table_html().replace(TABLE_TAG, TABLE_ID_TAG)
+    body = create_table_html(language).replace(TABLE_TAG, TABLE_ID_TAG)
     foot = open(FILE_FOOT)
     with head, foot:
         return ''.join([head.read(), body, foot.read()])
@@ -101,10 +101,15 @@ def main():
     """Verifies all necessary files are present to build successfully. If not,
     notify the user with an informative help message. If so write the index.html
     files in ../docs."""
-    html = create_index_html()
-    path = os.path.join(os.path.pardir, DIR_DOCS, FILE_INDEX)
-    with open(path, WRITE) as output_stream:
-        output_stream.writelines(html)
+    for language in ['en', 'cn']:
+        html = create_index_html(language)
+        if 'en' not in language:
+            folder = [DIR_DOCS, language, FILE_INDEX]
+        else:
+            folder = [DIR_DOCS, FILE_INDEX]
+        path = os.path.join(os.path.pardir, *folder)
+        with open(path, WRITE) as output_stream:
+            output_stream.writelines(html)
 
 if __name__ == '__main__':
     print('Creating index.html')

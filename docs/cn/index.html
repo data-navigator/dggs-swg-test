@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<!-- OGC favicon -->
+<link rel="shortcut icon"
+href="https://www.opengeospatial.org/pub/www/files/favicon.ico"
+type="image/vnd.microsoft.icon" />
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+<style>
+h1 {margin: 20 10 0 10px;}
+html,div,a,img,label{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
+:focus{outline:0;}
+body{background:#f6f6f6;color:#333;font:14px/1.6 'Open
+Sans',"Helvetica",Arial;-webkit-font-smoothing:antialiased;}
+body a{color:#2e81c2;text-decoration:none;}
+img{max-width:100%;height:auto;}
+select{max-width:100%;}
+img{height:auto;max-width:100%;}
+table{margin:0 0 1.5em;width:100%;border:1px solid #ddd;border-right:none;background:#fff;}
+th{padding:10px 10px;background:#555;}
+tr{padding:5px 5px;}
+td{padding:5px 10px;}
+input{margin:2px 0;padding:4px;}
+input{font-size:0.929em;}
+</style>
+
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+<!-- Local -->
+<script type="text/javascript">
+$(document).ready(function() {                                                                                                                                                      
+    $('#dggs-matrix').dataTable( {
+        "bPaginate": false,
+        "bInfo": false,
+        "bSort": false
+    } );
+} );   
+</script>
+<title>OGC Discrete Global Grid System Registry</title>
+</head>
+<body>
+<img
+src="https://www.opengeospatial.org/pub/www/files/OGC_Logo_2D_Blue_x_0_0.png"
+alt="OGC Logo" style="float:left" width=25%>
+<div 
+style="padding-top:17px;font-weight:600;font-size:200%;color:#444;font-family:'Helvetica Neue',Helvetica,Arial;">
+Discrete Global Grid System
+</div>
+<div 
+style="font-weight:600;font-size:140%;color:#444;font-family:'Helvetica Neue',Helvetica,Arial;">
+Abstract Specification
+</div>
+<div 
+style="font-weight:600;font-size:140%;color:#444;font-family:'Helvetica Neue',Helvetica,Arial;">
+Compatibility Matrix
+</div>
+<table id="dggs-matrix" class="display">
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"><a href="https://github.com">BlueFish</a></th>
+<th align="left"><a href="https://google.com">CatInHat</a></th>
+<th align="left"><a href="http://opengeospatial.org">OneFish</a></th>
+<th align="left"><a href="https://pyxisglobe.com">PYXIS Globe</a></th>
+<th align="left"><a href="https://reddit.com">RedFish</a></th>
+<th align="left"><a href="https://github.com/OSGeo/proj.4/wiki/rHEALPix">rHealPix</a></th>
+<th align="left"><a href="https://yahoo.com">Thing1</a></th>
+<th align="left"><a href="https://soundcloud.com">Thing2</a></th>
+<th align="left"><a href="https://en.wikipedia.org/wiki/Twofish">TwoFish</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL include a DGGS Reference Frame and the associated Functional Algorithms as defined by the DGGS Core Conceptual Data Model."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_1>实现方法</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="Domain completeness – the DGGS Domain of the initial discrete global grid SHALL cover the entire globe."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_2>全球覆盖</a></span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="Position uniqueness – the initial discrete global grid SHALL be defined without any overlapping DGGS Cells."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_3>无重叠DGGS单元格</a></span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="2/10">2/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL comprise a sequence of discrete global grid tessellations representing multiple spatial resolutions"><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_4>多重分辨率</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+<td align="left"><span title="7/10">7/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="3/10">3/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="For each successive level of grid refinement, a DGGS specification SHALL preserve Domain completeness and position uniqueness."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_5>所有分辨率下面积能够维持</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="For each successive level of grid refinement, a DGGS specification SHALL define DGGS Cells that are simple polygons."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_6>DGGS单元格为简单多边形</a></span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="3/10">3/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="For each successive level of grid refinement, a DGGS specification SHALL specify a DGGS equal area precision that represents the maximum allowed ratio of cell area uncertainty to cell area"><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_7>既定的DGGS单元格面积精度</a></span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="2/10">2/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="For each successive level of grid refinement, and for each cell geometry, a DGGS specification SHALL define DGGS Cells that are equal area (or iteratively and predictably converge on equal area) within the specified level of precision"><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_8>各种几何类型下均为等面积单元格</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="7/10">7/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL include an initial tessellation that is defined by equal area cells produced by mapping a base unit polyhedron to the surface model of the Earth."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_9>初始镶嵌拥有等面积单元格</a></span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL have a method to refine parent cells into finer resolution child cells."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_10>拥有单元格精细化的方法</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="2/10">2/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="7/10">7/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL use a spatial referencing method to assign a unique spatial reference (or index) to each DGGS cell across the entire DGGS Domain."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_11>能够为每个单元格分配独特的空间参考</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL define a unique index to address each cell across all defined spatial resolutions"><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_12>每个单元格的独特索引</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL define the location of a DGGS Cell reference to be the centroid of each cell."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_13>以形心作为参考的单元格</a></span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL define quantization methods for assigning data to DGGS cells and retrieval methods for reading data from DGGS cells."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_14>为每个单元格赋值的量化方法</a></span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="3/10">3/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="2/10">2/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL define functions/methods to perform both hierarchy and neighbourhood navigation operations across its entire domain."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_15>执行阶层和邻域导航的方法</a></span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="9/10">9/10</span></td>
+<td align="left"><span title="7/10">7/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="2/10">2/10</span></td>
+<td align="left"><span title="10/10">10/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL define functions/methods to perform simple spatial analysis operations across its entire domain. [ISO 19125-1:2004] SHALL be used as a basis for specifying the spatial relationship operands that support these functions."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_16>执行简单空间分析操作的方法</a></span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="2/10">2/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="3/10">3/10</span></td>
+<td align="left"><span title="7/10">7/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL define a method, or functional algorithm, to read, interpret and execute an external data query."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_17>读取、解析和执行数据查询的方法</a></span></td>
+<td align="left"><span title="7/10">7/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="8/10">8/10</span></td>
+<td align="left"><span title="7/10">7/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+</tr>
+<tr>
+<td align="left"><span title="A DGGS specification SHALL define a method, or functional algorithm, to translate data query/process results from internal DGGS data structures to standard data formats and to transmit/broadcast the reformatted result set via standard data transfer protocols."><a href=http://docs.opengeospatial.org/as/15-104r5/15-104r5.html#requirement_18>翻译查询结果至标准数据格式的方法</a></span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="5/10">5/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="1/10">1/10</span></td>
+<td align="left"><span title="6/10">6/10</span></td>
+<td align="left"><span title="4/10">4/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+<td align="left"><span title="0/10">0/10</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

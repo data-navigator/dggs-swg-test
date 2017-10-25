@@ -1,19 +1,54 @@
-- 实现方法
-- DGGS参考范围
-- 全球覆盖
-- 无重叠DGGS单元格
-- 多重分辨率
-- 所有分辨率下面积能够维持
-- DGGS单元格为简单多边形
-- 既定的DGGS单元格面积精度
-- 各种几何类型下均为等面积单元格
-- 初始镶嵌拥有等面积单元格
-- 拥有单元格精细化的方法
-- 能够为每个单元格分配独特的空间参考
-- 每个单元格的独特索引
-- 以形心作为参考的单元格
-- 为每个单元格赋值的量化方法
-- 执行阶层和邻域导航的方法
-- 执行简单空间分析操作的方法
-- 读取、解析和执行数据查询的方法
-- 翻译查询结果至标准数据格式的方法
+- requirement: 1
+  name: 实现方法
+  title: A DGGS specification SHALL include a DGGS Reference Frame and the associated Functional Algorithms as defined by the DGGS Core Conceptual Data Model.
+- requirement: 2
+  name: 全球覆盖
+  title: Domain completeness – the DGGS Domain of the initial discrete global grid SHALL cover the entire globe.
+- requirement: 3
+  name: 无重叠DGGS单元格
+  title: Position uniqueness – the initial discrete global grid SHALL be defined without any overlapping DGGS Cells.
+- requirement: 4
+  name: 多重分辨率
+  title: A DGGS specification SHALL comprise a sequence of discrete global grid tessellations representing multiple spatial resolutions
+- requirement: 5
+  name: 所有分辨率下面积能够维持
+  title: For each successive level of grid refinement, a DGGS specification SHALL preserve Domain completeness and position uniqueness.
+- requirement: 6
+  name: DGGS单元格为简单多边形
+  title: For each successive level of grid refinement, a DGGS specification SHALL define DGGS Cells that are simple polygons.
+- requirement: 7
+  name: 既定的DGGS单元格面积精度
+  title: For each successive level of grid refinement, a DGGS specification SHALL specify a DGGS equal area precision that represents the maximum allowed ratio of cell area uncertainty to cell area
+- requirement: 8
+  name: 各种几何类型下均为等面积单元格
+  title: For each successive level of grid refinement, and for each cell geometry, a DGGS specification SHALL define DGGS Cells that are equal area (or iteratively and predictably converge on equal area) within the specified level of precision
+- requirement: 9
+  name: 初始镶嵌拥有等面积单元格
+  title: A DGGS specification SHALL include an initial tessellation that is defined by equal area cells produced by mapping a base unit polyhedron to the surface model of the Earth.
+- requirement: 10
+  name: 拥有单元格精细化的方法
+  title: A DGGS specification SHALL have a method to refine parent cells into finer resolution child cells.
+- requirement: 11
+  name: 能够为每个单元格分配独特的空间参考
+  title: A DGGS specification SHALL use a spatial referencing method to assign a unique spatial reference (or index) to each DGGS cell across the entire DGGS Domain.
+- requirement: 12
+  name: 每个单元格的独特索引
+  title: A DGGS specification SHALL define a unique index to address each cell across all defined spatial resolutions
+- requirement: 13
+  name: 以形心作为参考的单元格
+  title: A DGGS specification SHALL define the location of a DGGS Cell reference to be the centroid of each cell.
+- requirement: 14
+  name: 为每个单元格赋值的量化方法
+  title: A DGGS specification SHALL define quantization methods for assigning data to DGGS cells and retrieval methods for reading data from DGGS cells.
+- requirement: 15
+  name: 执行阶层和邻域导航的方法
+  title: A DGGS specification SHALL define functions/methods to perform both hierarchy and neighbourhood navigation operations across its entire domain.
+- requirement: 16
+  name: 执行简单空间分析操作的方法
+  title: A DGGS specification SHALL define functions/methods to perform simple spatial analysis operations across its entire domain. [ISO 19125-1:2004] SHALL be used as a basis for specifying the spatial relationship operands that support these functions.
+- requirement: 17
+  name: 读取、解析和执行数据查询的方法
+  title: A DGGS specification SHALL define a method, or functional algorithm, to read, interpret and execute an external data query.
+- requirement: 18
+  name: 翻译查询结果至标准数据格式的方法
+  title: A DGGS specification SHALL define a method, or functional algorithm, to translate data query/process results from internal DGGS data structures to standard data formats and to transmit/broadcast the reformatted result set via standard data transfer protocols.
