@@ -7,9 +7,11 @@ import markdown
 from tabulate import tabulate
 import yaml
 
+ANCHOR_LINK = '#requirement_'
 DIR_DATA = 'data'
 DIR_DOCS = 'docs'
 DIR_RES = 'res'
+DOC_URL = 'http://docs.opengeospatial.org/as/15-104r5/15-104r5.html'
 FILE_FOOT = 'foot.html'
 FILE_HEAD = 'head.html'
 FILE_HEADERS = 'requirements.yaml'
@@ -29,6 +31,7 @@ def generate_table_rows():
     res = os.path.join(os.path.pardir, DIR_RES)
     requirements_stream = open(os.path.join(res, 'en', FILE_HEADERS))
     with requirements_stream:
+        # list of dictionaries
         requirements = yaml.load(requirements_stream, yaml.Loader)
     data = os.path.join(os.path.pardir, DIR_DATA)
     file_names = [path for path in os.listdir(data) if path.endswith(YAML)]
@@ -39,7 +42,16 @@ def generate_table_rows():
         with data_stream:
             yaml_data = yaml.load(data_stream, yaml.Loader)
             rows.append(yaml_data['requirements'].split(' '))
-    yield from zip(requirements, *rows)
+    yield from zip([parse_requirement(r) for r in requirements], *rows)
+
+
+def parse_requirement(requirement):
+    """Turns a requirement from a dictionary into html string."""
+    name = requirement['name']
+    title = requirement['title']
+    url = DOC_URL + ANCHOR_LINK + str(requirement['requirement'])
+    link = f'<a href={url}>{name}</a>'
+    return f'<span title="{title}">{link}</span>'
 
 
 def generate_table_column_headers():
