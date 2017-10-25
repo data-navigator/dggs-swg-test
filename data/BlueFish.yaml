@@ -1,21 +1,4 @@
 name: BlueFish
+requirements: [0/10, 5/10, 4/10, 0/10, 0/10, 8/10, 9/10, 0/10, 6/10, 0/10, 0/10, 0/10,
+  0/10, 8/10, 9/10, 5/10, 7/10, 5/10]
 url: https://github.com
-requirements:
-    False
-    True
-    True
-    False
-    False
-    True
-    True
-    False
-    True
-    False
-    False
-    False
-    False
-    True
-    True
-    True
-    True
-    True

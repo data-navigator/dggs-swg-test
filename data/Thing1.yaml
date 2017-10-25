@@ -1,21 +1,4 @@
 name: Thing1
+requirements: [0/10, 0/10, 2/10, 0/10, 10/10, 0/10, 4/10, 6/10, 0/10, 7/10, 10/10,
+  6/10, 0/10, 9/10, 8/10, 7/10, 7/10, 4/10]
 url: https://yahoo.com
-requirements:
-    False
-    False
-    True
-    False
-    True
-    False
-    True
-    True
-    False
-    True
-    True
-    True
-    False
-    True
-    True
-    True
-    True
-    True

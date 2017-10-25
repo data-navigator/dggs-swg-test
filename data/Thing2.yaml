@@ -1,21 +1,4 @@
 name: Thing2
+requirements: [6/10, 0/10, 0/10, 5/10, 0/10, 0/10, 6/10, 7/10, 0/10, 0/10, 5/10, 8/10,
+  0/10, 0/10, 2/10, 0/10, 0/10, 0/10]
 url: https://soundcloud.com
-requirements:
-    True
-    False
-    False
-    True
-    False
-    False
-    True
-    True
-    False
-    False
-    True
-    True
-    False
-    False
-    True
-    False
-    False
-    False

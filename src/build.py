@@ -41,7 +41,8 @@ def generate_table_rows():
     for data_stream in data_streams:
         with data_stream:
             yaml_data = yaml.load(data_stream, yaml.Loader)
-            rows.append(yaml_data['requirements'].split(' '))
+            results = yaml_data['requirements']
+            rows.append([parse_result(r) for r in results])
     yield from zip([parse_requirement(r) for r in requirements], *rows)
 
 
@@ -52,6 +53,11 @@ def parse_requirement(requirement):
     url = DOC_URL + ANCHOR_LINK + str(requirement['requirement'])
     link = f'<a href={url}>{name}</a>'
     return f'<span title="{title}">{link}</span>'
+
+
+def parse_result(result):
+    """Turns a result from a scalar into a html string."""
+    return f'<span title="{str(result)}">{str(result)}</span>'
 
 
 def generate_table_column_headers():
@@ -66,7 +72,8 @@ def generate_table_column_headers():
     for data_stream in data_streams:
         with data_stream:
             yaml_data = yaml.load(data_stream, yaml.Loader)
-            tag_open = '<a href="{url}">'.format(url=yaml_data['url'])
+            url = yaml_data['url']
+            tag_open = f'<a href="{url}">'
             tag_close = '</a>'
             rows.append(tag_open + yaml_data['name'] + tag_close)
     yield from rows
